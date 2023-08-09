@@ -7,10 +7,17 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+:root{
+    --primary-color:#edfefc;
+    --secondary-color: #212121;
+   }
+   .darktheme{
+       --primary-color:#000106;
+       --secondary-color: #fff;
+   }
 .main-nav {
     background: linear-gradient(45deg, black, darkslategray);
-    color: white;
+    color: var(--primary-color);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,10 +25,8 @@ body {
     justify-content: space-between;
 }
 
-.main-nav ul {
-    display: flex;
-    list-style-type: row;
-    justify-content: center;
+.main-nav h1 .text-second {
+    color: greenyellow;
 }
 
 .main-nav img {
@@ -75,26 +80,26 @@ body {
 }
 
 .btn-primary:hover {
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px var(--primary-color);
     cursor: pointer;
 }
 
-/*  Favorite Places Page */
+/* Favorite Places Page */
 
 .favorite-places {
     font-family: sans-serif;
 }
 
 .container-favoriteplaces {
-    background: linear-gradient(45deg, whitesmoke, rgba(32, 224, 224, 0.77));
+    background: linear-gradient(45deg, var(--primary-color), rgba(32, 224, 224, 0.77));
     padding: 15px 9%;
     padding-bottom: 100px;
-}    
+}
 
 .container-favoriteplaces .heading {
     text-align: center;
     padding-bottom: 15px;
-    color: #fff;
+    color: var(--primary-color);
     text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     font-size: 50px;
 }
@@ -106,9 +111,9 @@ body {
 }
 
 .container-favoriteplaces .box-container .box {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(var(--secondary-color), 0.2);
     border-radius: 5px;
-    background: #fff;
+    background: var(--primary-color);
     text-align: center;
     padding: 30px 20px;
 }
@@ -118,13 +123,13 @@ body {
 }
 
 .container-favoriteplaces .box-container .box h3 {
-    color: #444;
+    color: var(--secondary-color);
     font-size: 22px;
     padding: 10px 0;
 }
 
 .container-favoriteplaces .box-container .box p {
-    color: #444;
+    color: var(--secondary-color);
     font-size: 15px;
     line-height: 1.8;
 }
@@ -132,8 +137,8 @@ body {
 .container-favoriteplaces .box-container .box .btn {
     margin-top: 10px;
     display: inline-block;
-    background: #333;
-    color: #fff;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 17px;
     border-radius: 5px;
     padding: 8px 25px;
